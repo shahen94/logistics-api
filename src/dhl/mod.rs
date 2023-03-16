@@ -1,5 +1,5 @@
 pub mod constants;
-pub mod tracking;
 mod dhl;
+pub mod tracking;
 
 pub use dhl::DHL;

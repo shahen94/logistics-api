@@ -6,8 +6,8 @@ pub struct DHL {
 
 impl DHL {
     pub fn new(api_key: &'static str) -> Self {
-      return DHL {
+        return DHL {
             tracking: TrackingApi::new(api_key),
-        }
+        };
     }
 }

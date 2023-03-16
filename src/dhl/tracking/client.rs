@@ -1,10 +1,7 @@
-use std::error::Error;
-
-use reqwest::blocking::Client;
-
-use crate::dhl::constants;
-
 use super::models::Tracking;
+use super::operation::Result;
+use crate::dhl::constants;
+use reqwest::blocking::Client;
 
 /// DHL Tracking API
 pub struct TrackingApi {
@@ -24,15 +21,14 @@ impl TrackingApi {
     }
 
     /// Get tracking information for a given tracking number
-    pub fn get_tracking(&mut self, tracking_number: &str) -> Result<Tracking, Box<dyn Error>> {
-        let res = self
+    pub fn get_tracking(&mut self, tracking_number: &str) -> Result<Tracking> {
+        let tracking: Tracking = self
             .http_client
             .get(&self.base_url)
             .query(&[("trackingNumber", tracking_number), ("service", "express")])
             .header("DHL-API-Key", self.api_key.clone())
-            .send()?;
-
-        let tracking: Tracking = res.json()?;
+            .send()?
+            .json()?;
 
         Ok(tracking)
     }
