@@ -1,8 +1,8 @@
 [package]
 name = "logistics-api"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
-description = "DHL API client"
+description = "Track your packages from all over the world. Supports logicsitcs from DHL, UPS, FedEx, USPS, and more."
 license = "MIT"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html

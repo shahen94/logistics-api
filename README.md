@@ -1,10 +1,10 @@
-# DHL Rust API
+# Logistics API
 
 #
 ## Supported APIs
-[x] DHL
-[ ] UPS
-[ ] Fedex
+* DHL   (✅)
+* UPS   (🕒)
+* Fedex (🕒)
 
 ### Usage
 
