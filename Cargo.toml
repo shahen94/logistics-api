@@ -1,6 +1,6 @@
 [package]
 name = "logistics-api"
-version = "0.1.2"
+version = "0.1.3"
 edition = "2021"
 description = "Track your packages from all over the world. Supports logicsitcs from DHL, UPS, FedEx, USPS, and more."
 license = "MIT"
