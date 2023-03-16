@@ -8,7 +8,7 @@ authors = ["Shahen Hovhannisyan <shahen.hovhannisyan.94@gmail.com>"]
 repository = "https://github.com/shahen94/logistics-api"
 documentation = "https://docs.rs/logistics-api"
 readme = "README.md"
-keywords = ["logistics", "api", "tracking", "dhl", "ups", "fedex", "usps"]
+keywords = ["logistics", "dhl", "ups", "fedex", "usps"]
 categories = ["api", "logistics", "tracking"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
