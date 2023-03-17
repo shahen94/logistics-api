@@ -1,6 +1,5 @@
 # Logistics API
 
-#
 ## Supported APIs
 * DHL   (✅)
 * UPS   (🕒)
@@ -8,13 +7,37 @@
 
 ### Usage
 
-```rust
-fn main() {
-  let mut dhl = logistics_api::DHL::new("api-key");
+**With Blocking I/O**
 
-  match dhl.tracking.get_tracking("tracking-code") {
-    Ok(details) => println!("{:?}", details),
-    Err(err) => println!("Something went wrong, {:?}", err)
+```rust
+use logistics_api::DHL;
+
+fn main() {
+  let dhl = DHL::new("YOUR_API_KEY");
+
+  let tracking = dhl.tracking.get_tracking_sync("YOUR_TRACKING_NUMBER");
+
+  match tracking {
+    Ok(tracking) => println!("{:#?}", tracking),
+    Err(err) => println!("{:#?}", err),
+  }
+}
+```
+
+**Using Async I/O**
+
+```rust
+use logistics_api::DHL;
+
+#[tokio::main]
+async fn main() {
+  let dhl = DHL::new("YOUR_API_KEY");
+
+  let tracking = dhl.tracking.get_tracking("YOUR_TRACKING_NUMBER").await;
+
+  match tracking {
+    Ok(tracking) => println!("{:#?}", tracking),
+    Err(err) => println!("{:#?}", err),
   }
 }
 ```
