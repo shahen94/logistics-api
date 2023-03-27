@@ -52,7 +52,7 @@ pub struct ShipmentStatus {
 #[derive(Debug, Serialize, Deserialize)]
 pub struct ShipmentDetails {
     #[serde(rename = "proofOfDelivery")]
-    pub proof_of_delivery: ProofOfDelivery,
+    pub proof_of_delivery: Option<ProofOfDelivery>,
 
     #[serde(rename = "proofOfDeliverySignedAvailable")]
     pub proof_of_delivery_signed_available: bool,
