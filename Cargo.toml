@@ -1,6 +1,6 @@
 [package]
 name = "logistics-api"
-version = "0.1.5"
+version = "0.1.6"
 edition = "2021"
 description = "Track your packages from all over the world. Supports logicsitcs from DHL, UPS, FedEx, USPS, and more."
 license = "MIT"
@@ -9,7 +9,7 @@ repository = "https://github.com/shahen94/logistics-api"
 documentation = "https://docs.rs/logistics-api"
 readme = "README.md"
 keywords = ["logistics", "dhl", "ups", "fedex", "usps"]
-categories = ["api", "logistics", "tracking"]
+categories = ["parsing", "network-programming", "accessibility"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
